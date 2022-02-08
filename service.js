@@ -9,6 +9,8 @@ app.use(bodyparser.json())
 
 app.get('/greet', stripeServer.greetUser);
 
+app.get('/config', stripeServer.config);
+
 app.post('/create-payment-intent', stripeServer.createPaymentIntent)
 
 module.exports = app;

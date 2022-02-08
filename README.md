@@ -1,2 +1,1 @@
-# stripeDemoServer
-Small demo stripe server created in Node.js
+Stripe demo server created in Node.js

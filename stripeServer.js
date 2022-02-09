@@ -8,7 +8,7 @@ dotenv.config();
 const SECRET_KEY = process.env.SECRET_KEY
 const PUBLISHABLE_KEY = process.env.PUBLISHABLE_KEY
 // This is your real test secret API key.
-const stripe = require(constants.stripe)(SECRET_KEY);
+const stripe = require(constants.stripe)("sk_test_51KQTVBHUbXXVEQErYAD5QtoSlUKDp3t1lPG17z5mbrxLOmMXjOu6tdzrRuCdgdv4u5hAsEd1SnVGPbWggCjSzL5L00Sv6kZ3Xh");
 app.use(express.static("."));
 app.use(express.json());
 
@@ -18,7 +18,7 @@ module.exports = {
   },
 
   config: function (req, res) {
-    return res.status(200).json({ 'publishableKey': PUBLISHABLE_KEY });
+    return res.status(200).json({ 'publishableKey': "pk_test_51KQTVBHUbXXVEQErd7axhbqC3oy17wNxgqfEi29mFNaE2r2ddpciHX6qAPbUtDBwXKqJtXTBCKCDlygqSlyqpdpB00c01KjWw0" });
   },
 
   createPaymentIntent: async function (req, res) {

@@ -2,7 +2,8 @@ const http = require('http');
 const service = require('./service');
 const dotenv = require('dotenv');
 dotenv.config();
-const port = process.env.PORT;
+const port = process.env.PORT; //for deploying on heroku
+//const port = process.env.NODE_PORT // for testing on local host
 
 const server = http.createServer(service);
 

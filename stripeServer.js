@@ -18,6 +18,7 @@ module.exports = {
   },
 
   config: function (req, res) {
+    console.log("Response config")
     return res.status(200).json({ 'publishableKey': "pk_test_51KQTVBHUbXXVEQErd7axhbqC3oy17wNxgqfEi29mFNaE2r2ddpciHX6qAPbUtDBwXKqJtXTBCKCDlygqSlyqpdpB00c01KjWw0" });
   },
 
@@ -34,8 +35,10 @@ module.exports = {
         payment_method_types: [paymentMethodType]
       });
       
+      console.log("Response clinet secret")
       return res.status(200).json({ clientSecret: paymentIntent.client_secret });
     } catch (e) {
+      console.log("Response error:" + e)
       return res.status(400).json({ error: { message: e.message } });
     }
   }
